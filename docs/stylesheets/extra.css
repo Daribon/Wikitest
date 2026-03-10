@@ -8,3 +8,13 @@
 code, pre code {
     font-feature-settings: normal;      /* Avoid weird ligatures in code */
 }
+
+:root {
+    --md-primary-fg-color:        #4A148C;   /* deep mystical purple */
+    --md-accent-fg-color:         #AB47BC;   /* accent for links/hovers */
+    --md-default-bg-color--dark:  #0a0014;   /* very dark bg for immersion */
+}
+
+.md-header {
+    background: #1a0033;                    /* subtle dark purple header */
+}
