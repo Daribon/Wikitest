@@ -115,37 +115,6 @@ body {
     border-left: 1px solid var(--wow-border);
 }
 
-@media only screen and (min-width: 76.25em) {
-    .md-main__inner {
-        max-width: none;
-    }
-    .md-sidebar--primary {
-        left: 0;
-    }
-    .md-sidebar--secondary {
-        right: 0;
-        margin-left: 0;
-        -webkit-transform: none;
-        transform: none;
-    }
-    /* Remove box-shadow on active nav item — cleaner look */
-    .md-nav--lifted > .md-nav__list > .md-nav__item--active > .md-nav__link {
-        background: none;
-        box-shadow: none;
-    }
-}
-
-@media screen and (min-width: 60em) {
-    .md-nav--secondary .md-nav__title {
-        background: none;
-        box-shadow: none;
-    }
-}
-
-body .md-sidebar--primary .md-sidebar__scrollwrap {
-    border-right: 1px solid var(--wow-border);
-}
-
 /* Nav section titles */
 .md-nav__title {
     font-family: 'Cinzel', serif;
