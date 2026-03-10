@@ -8,10 +8,10 @@ theme:
   name: material
   language: en
   font:
-    text: Cinzel             # Serif fantasy/roman typeface — evokes ancient stone engravings
-    code: Fira Code          # Modern, readable monospaced font for code blocks
+    text: Cinzel
+    code: Fira Code
   palette:
-    scheme: slate            # Dark mode base
+    scheme: slate
     primary: black
     accent: amber
   features:
