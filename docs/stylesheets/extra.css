@@ -108,11 +108,22 @@ body {
 .md-sidebar {
     background: var(--wow-dark);
     border-right: 1px solid var(--wow-border);
+    /* Prevent scroll area from creeping under the header */
+    top: var(--md-header-height, 3.2rem) !important;
+    height: calc(100vh - var(--md-header-height, 3.2rem));
+    overflow: hidden;
 }
 
 .md-sidebar--secondary {
     border-right: none;
     border-left: 1px solid var(--wow-border);
+}
+
+.md-sidebar__scrollwrap {
+    /* Constrain scroll within the sidebar, not behind the header */
+    max-height: 100% !important;
+    overflow-y: auto;
+    overscroll-behavior: contain;
 }
 
 /* Nav section titles */
