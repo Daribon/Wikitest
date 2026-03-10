@@ -1,29 +1,10 @@
-site_name: VMangos Wiki
-site_description: Official documentation for the VMangos Vanilla WoW server emulator
+site_name: Wikitest
 site_url: https://daribon.github.io/Wikitest/
-repo_url: https://github.com/Daribon/Wikitest
-edit_uri: edit/master/docs/
 use_directory_urls: true
 
 theme:
   name: material
   language: en
-  font:
-    text: Roboto
-    code: Roboto Mono
-  palette:
-    - scheme: default
-      primary: deep purple
-      accent: deep purple
-      toggle:
-        icon: material/weather-night
-        name: Switch to dark mode
-    - scheme: slate
-      primary: deep purple
-      accent: deep purple
-      toggle:
-        icon: material/weather-sunny
-        name: Switch to light mode
   features:
     - navigation.instant
     - navigation.sections
@@ -31,7 +12,6 @@ theme:
     - navigation.top
     - toc.integrate
     - content.code.copy
-    - content.action.edit
     - search.suggest
     - search.highlight
 
@@ -44,8 +24,6 @@ markdown_extensions:
   - def_list
   - attr_list
   - md_in_html
-  - codehilite:
-      guess_lang: false
   - pymdownx.superfences
   - pymdownx.details
   - pymdownx.highlight
@@ -59,43 +37,39 @@ markdown_extensions:
       alternate_style: true
 
 nav:
-  - Home: index.md
+  - Home: Home.md
 
   - Getting Started:
-      - Overview: getting-started/overview.md
-      - Installation: getting-started/installation.md
-      - Configuration: getting-started/configuration.md
-      - FAQ: getting-started/faq.md
+      - About the Project: About-the-project.md
+      - Getting it Working: Getting-it-working.md
+      - Frequently Asked Questions: Frequently-Asked-Questions.md
+      - Contribution Guide: Contribution-guide.md
 
-  - Gameplay:
-      - Raids: gameplay/raids.md
-      - Dungeons: gameplay/dungeons.md
-      - Classes: gameplay/classes.md
-      - Quests: gameplay/quests.md
-      - Items: gameplay/items.md
-
-  - Development:
-      - Contributing: development/contributing.md
-      - Coding Standards: development/coding-standards.md
-      - Build Guide: development/build-guide.md
-      - Core Architecture: development/core-architecture.md
-
-  - Scripting:
-      - Introduction: scripting/intro.md
-      - Lua API: scripting/lua-api.md
-      - Examples: scripting/examples.md
+  - Compiling:
+      - Compiling on Windows: Compiling-on-Windows.md
+      - Compiling on Linux: Compiling-on-Linux.md
+      - Devuan Install Guide: Devuan-install-guide.md
 
   - Database:
-      - Structure Overview: database/structure.md
-      - World Tables: database/world-tables.md
-      - Characters Tables: database/characters-tables.md
-      - Auth Tables: database/auth-tables.md
+      - World Database: World-Database.md
+      - DB Script Tables: DB-Script-Tables.md
+      - Conditions: conditions.md
+      - Creature: creature.md
+      - Creature Addon: creature_addon.md
+      - Creature AI Events: creature_ai_events.md
+      - Creature AI Scripts: creature_ai_scripts.md
+      - Area Template: area_template.md
+      - Areatrigger BG Entrance: areatrigger_bg_entrance.md
+      - Areatrigger Involved Relation: areatrigger_involvedrelation.md
+      - Areatrigger Tavern: areatrigger_tavern.md
+      - Areatrigger Teleport: areatrigger_teleport.md
+      - Areatrigger Template: areatrigger_template.md
+      - Auction House Bot: auctionhousebot.md
+      - Autobroadcast: autobroadcast.md
+      - Battleground Events: battleground_events.md
+      - Battleground Template: battleground_template.md
+      - Battlemaster Entry: battlemaster_entry.md
+      - Broadcast Text: broadcast_text.md
+      - Cinematic Waypoints: cinematic_waypoints.md
+      - Command: command.md
 
-  - Server Administration:
-      - Commands: admin/commands.md
-      - GM Guide: admin/gm-guide.md
-      - Troubleshooting: admin/troubleshooting.md
-
-  - Project:
-      - Changelog: project/changelog.md
-      - Roadmap: project/roadmap.md
