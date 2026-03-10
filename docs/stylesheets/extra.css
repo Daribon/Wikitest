@@ -58,7 +58,7 @@ body {
 .md-header {
     background: linear-gradient(180deg, #0d0b09 0%, #1a1510 100%);
     border-bottom: 1px solid var(--clr-border-glow);
-    box-shadow: 0 2px 16px rgba(0,0,0,0.9), 0 1px 0 var(--clr-border-glow);
+    box-shadow: 0 1px 8px rgba(0,0,0,0.6);
 }
 
 .md-header__title {
@@ -103,12 +103,14 @@ body {
 
 .md-sidebar {
     background: var(--clr-dark);
-    border-right: 1px solid var(--clr-border-glow);
+    border-right: none;
+    box-shadow: none;
 }
 
 .md-sidebar--secondary {
     border-right: none;
-    border-left: 1px solid var(--clr-border-glow);
+    border-left: none;
+    box-shadow: none;
 }
 
 /* Nav section titles */
@@ -119,7 +121,7 @@ body {
     letter-spacing: 0.12em;
     text-transform: uppercase;
     color: var(--clr-gold) !important;
-    border-bottom: 1px solid var(--clr-border-glow);
+    border-bottom: none;
     padding-bottom: 0.4rem;
     margin-bottom: 0.4rem;
 }
