@@ -1,0 +1,106 @@
+site_name: VMangos Wiki
+site_description: Official documentation for the VMangos Vanilla WoW server emulator
+site_url: https://vmangos.github.io/wiki
+repo_url: https://github.com/vmangos/wiki
+edit_uri: edit/master/docs/
+
+theme:
+  name: material
+  language: en
+  font:
+    text: Roboto
+    code: Roboto Mono
+  palette:
+    - scheme: default
+      primary: deep purple
+      accent: deep purple
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - scheme: slate
+      primary: deep purple
+      accent: deep purple
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
+  features:
+    - navigation.instant
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - toc.integrate
+    - content.code.copy
+    - content.action.edit
+    - search.suggest
+    - search.highlight
+
+markdown_extensions:
+  - admonition
+  - toc:
+      permalink: true
+  - tables
+  - footnotes
+  - def_list
+  - attr_list
+  - md_in_html
+  - codehilite:
+      guess_lang: false
+  - pymdownx.superfences
+  - pymdownx.details
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.magiclink
+  - pymdownx.mark
+  - pymdownx.keys
+  - pymdownx.emoji:
+      emoji_generator: !!python/name:pymdownx.emoji.to_svg
+  - pymdownx.tabbed:
+      alternate_style: true
+
+extra_css:
+  - css/extra.css
+
+extra_javascript:
+  - js/extra.js
+
+nav:
+  - Home: index.md
+
+  - Getting Started:
+      - Overview: getting-started/overview.md
+      - Installation: getting-started/installation.md
+      - Configuration: getting-started/configuration.md
+      - FAQ: getting-started/faq.md
+
+  - Gameplay:
+      - Raids: gameplay/raids.md
+      - Dungeons: gameplay/dungeons.md
+      - Classes: gameplay/classes.md
+      - Quests: gameplay/quests.md
+      - Items: gameplay/items.md
+
+  - Development:
+      - Contributing: development/contributing.md
+      - Coding Standards: development/coding-standards.md
+      - Build Guide: development/build-guide.md
+      - Core Architecture: development/core-architecture.md
+
+  - Scripting:
+      - Introduction: scripting/intro.md
+      - Lua API: scripting/lua-api.md
+      - Examples: scripting/examples.md
+
+  - Database:
+      - Structure Overview: database/structure.md
+      - World Tables: database/world-tables.md
+      - Characters Tables: database/characters-tables.md
+      - Auth Tables: database/auth-tables.md
+
+  - Server Administration:
+      - Commands: admin/commands.md
+      - GM Guide: admin/gm-guide.md
+      - Troubleshooting: admin/troubleshooting.md
+
+  - Project:
+      - Changelog: project/changelog.md
+      - Roadmap: project/roadmap.md
