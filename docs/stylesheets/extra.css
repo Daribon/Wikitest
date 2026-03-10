@@ -1,5 +1,5 @@
 /* ============================================================
- *  VMangos Wiki — Dark WoW / Medieval Fantasy Theme
+ *  VMangos Wiki — Dark Medieval Fantasy Theme
  *  Inspired by vanilla-archive.thealphaproject.eu
  *  ============================================================ */
 
@@ -8,42 +8,38 @@
 
 /* ── Root palette ── */
 :root {
-    --wow-black:        #0b0a09;
-    --wow-dark:         #110f0d;
-    --wow-surface:      #1a1612;
-    --wow-panel:        #211d17;
-    --wow-border:       #4a3c28;
-    --wow-border-glow:  #7a5c2e;
-    --wow-gold:         #c8a84b;
-    --wow-gold-bright:  #f0c060;
-    --wow-gold-dim:     #8a6d30;
-    --wow-amber:        #d4881e;
-    --wow-text:         #d4c4a0;
-    --wow-text-muted:   #8a7a5a;
-    --wow-link:         #c8a84b;
-    --wow-link-hover:   #f0c060;
-    --wow-red:          #8b2020;
-    --wow-code-bg:      #160f08;
-    --wow-shadow:       0 4px 24px rgba(0,0,0,0.8);
-    --wow-glow:         0 0 6px rgba(200,168,75,0.15);
+    --clr-black:        #0b0a09;
+    --clr-dark:         #0b0a09;
+    --clr-surface:      #1a1612;
+    --clr-panel:        #211d17;
+    --clr-border-glow:  #7a5c2e;
+    --clr-gold:         #c8a84b;
+    --clr-gold-bright:  #f0c060;
+    --clr-gold-dim:     #8a6d30;
+    --clr-amber:        #d4881e;
+    --clr-text:         #d4c4a0;
+    --clr-text-muted:   #8a7a5a;
+    --clr-code-bg:      #160f08;
+    --clr-shadow:       0 4px 24px rgba(0,0,0,0.8);
+    --clr-glow:         0 0 6px rgba(200,168,75,0.15);
 }
 
 /* ── Base overrides ── */
 [data-md-color-scheme="slate"] {
-    --md-default-bg-color:        var(--wow-dark);
-    --md-default-fg-color:        var(--wow-text);
-    --md-default-fg-color--light: var(--wow-text-muted);
-    --md-primary-fg-color:        var(--wow-black);
-    --md-primary-bg-color:        var(--wow-gold);
-    --md-accent-fg-color:         var(--wow-gold-bright);
-    --md-typeset-a-color:         var(--wow-link);
-    --md-code-bg-color:           var(--wow-code-bg);
+    --md-default-bg-color:        var(--clr-dark);
+    --md-default-fg-color:        var(--clr-text);
+    --md-default-fg-color--light: var(--clr-text-muted);
+    --md-primary-fg-color:        var(--clr-black);
+    --md-primary-bg-color:        var(--clr-gold);
+    --md-accent-fg-color:         var(--clr-gold-bright);
+    --md-typeset-a-color:         var(--clr-gold);
+    --md-code-bg-color:           var(--clr-code-bg);
     --md-code-fg-color:           #d4b896;
 }
 
 /* ── Body & base typography ── */
 body {
-    background-color: var(--wow-black);
+    background-color: var(--clr-black);
     background-image:
     radial-gradient(ellipse at 20% 0%, rgba(80,50,10,0.15) 0%, transparent 60%),
     radial-gradient(ellipse at 80% 100%, rgba(60,30,5,0.12) 0%, transparent 60%),
@@ -55,14 +51,14 @@ body {
     font-family: 'EB Garamond', Georgia, serif;
     font-size: 0.9rem;
     line-height: 1.65;
-    color: var(--wow-text);
+    color: var(--clr-text);
 }
 
 /* ── Header / top bar ── */
 .md-header {
     background: linear-gradient(180deg, #0d0b09 0%, #1a1510 100%);
-    border-bottom: 1px solid var(--wow-border);
-    box-shadow: 0 2px 16px rgba(0,0,0,0.9), 0 1px 0 var(--wow-border-glow);
+    border-bottom: 1px solid var(--clr-border-glow);
+    box-shadow: 0 2px 16px rgba(0,0,0,0.9), 0 1px 0 var(--clr-border-glow);
 }
 
 .md-header__title {
@@ -70,7 +66,7 @@ body {
     font-weight: 700;
     font-size: 1.1rem;
     letter-spacing: 0.08em;
-    color: var(--wow-gold) !important;
+    color: var(--clr-gold) !important;
     text-shadow: 0 0 10px rgba(200,168,75,0.2), 0 2px 4px rgba(0,0,0,0.8);
 }
 
@@ -81,23 +77,23 @@ body {
 
 /* ── Search bar ── */
 .md-search__form {
-    background: var(--wow-surface);
-    border: 1px solid var(--wow-border);
+    background: var(--clr-surface);
+    border: 1px solid var(--clr-border-glow);
     border-radius: 3px;
 }
 
 .md-search__form:focus-within {
-    border-color: var(--wow-gold-dim);
+    border-color: var(--clr-gold-dim);
     box-shadow: 0 0 8px rgba(200,168,75,0.2);
 }
 
 .md-search__input {
     font-family: 'EB Garamond', serif;
-    color: var(--wow-text);
+    color: var(--clr-text);
 }
 
 .md-search__input::placeholder {
-    color: var(--wow-text-muted);
+    color: var(--clr-text-muted);
 }
 
 /* ── Navigation sidebar ── */
@@ -106,13 +102,13 @@ body {
 }
 
 .md-sidebar {
-    background: var(--wow-dark);
-    border-right: 1px solid var(--wow-border);
+    background: var(--clr-dark);
+    border-right: 1px solid var(--clr-border-glow);
 }
 
 .md-sidebar--secondary {
     border-right: none;
-    border-left: 1px solid var(--wow-border);
+    border-left: 1px solid var(--clr-border-glow);
 }
 
 /* Nav section titles */
@@ -122,33 +118,33 @@ body {
     font-size: 0.72rem;
     letter-spacing: 0.12em;
     text-transform: uppercase;
-    color: var(--wow-gold) !important;
-    border-bottom: 1px solid var(--wow-border);
+    color: var(--clr-gold) !important;
+    border-bottom: 1px solid var(--clr-border-glow);
     padding-bottom: 0.4rem;
     margin-bottom: 0.4rem;
 }
 
 /* Nav links */
 .md-nav__link {
-    color: var(--wow-text-muted) !important;
+    color: var(--clr-text-muted) !important;
     transition: color 0.2s, padding-left 0.2s;
     font-size: 0.95rem;
 }
 
 .md-nav__link:hover,
 .md-nav__link:focus {
-    color: var(--wow-gold) !important;
+    color: var(--clr-gold) !important;
     padding-left: 0.25rem;
 }
 
 .md-nav__link--active {
-    color: var(--wow-gold-bright) !important;
+    color: var(--clr-gold-bright) !important;
     font-weight: 600;
 }
 
 /* ── Main content area ── */
 .md-main {
-    background: var(--wow-black);
+    background: var(--clr-black);
 }
 
 .md-content {
@@ -161,7 +157,7 @@ body {
 
 /* ── Edit page button ── */
 .md-content__button {
-    color: var(--wow-gold-dim);
+    color: var(--clr-gold-dim);
     opacity: 0.6;
     transition: opacity 0.2s, color 0.2s;
     position: relative;
@@ -170,7 +166,7 @@ body {
 
 .md-content__button:hover {
     opacity: 1;
-    color: var(--wow-gold);
+    color: var(--clr-gold);
 }
 
 /* ── Page headings ── */
@@ -178,7 +174,7 @@ body {
     font-family: 'Cinzel Decorative', 'Cinzel', serif;
     font-weight: 700;
     font-size: 1.6rem;
-    color: var(--wow-gold-bright);
+    color: var(--clr-gold-bright);
     text-shadow: 0 0 12px rgba(200,168,75,0.15), 0 2px 4px rgba(0,0,0,0.9);
     letter-spacing: 0.04em;
     border-bottom: none;
@@ -187,15 +183,13 @@ body {
     margin-bottom: 1.5rem;
 }
 
-
-
 .md-typeset h2 {
     font-family: 'Cinzel', serif;
     font-weight: 600;
     font-size: 1.2rem;
-    color: var(--wow-gold);
+    color: var(--clr-gold);
     letter-spacing: 0.03em;
-    border-bottom: 1px solid var(--wow-border);
+    border-bottom: 1px solid var(--clr-border-glow);
     padding-bottom: 0.4rem;
     margin-top: 2.5rem;
 }
@@ -204,7 +198,7 @@ body {
     font-family: 'Cinzel', serif;
     font-weight: 600;
     font-size: 1rem;
-    color: var(--wow-amber);
+    color: var(--clr-amber);
     letter-spacing: 0.02em;
     margin-top: 2rem;
 }
@@ -213,47 +207,47 @@ body {
 .md-typeset h5,
 .md-typeset h6 {
     font-family: 'Cinzel', serif;
-    color: var(--wow-text);
+    color: var(--clr-text);
 }
 
 /* ── Links ── */
 .md-typeset a {
-    color: var(--wow-link);
+    color: var(--clr-gold);
     text-decoration: none;
     border-bottom: 1px solid transparent;
     transition: color 0.2s, border-color 0.2s;
 }
 
 .md-typeset a:hover {
-    color: var(--wow-link-hover);
-    border-bottom-color: var(--wow-gold-dim);
+    color: var(--clr-gold-bright);
+    border-bottom-color: var(--clr-gold-dim);
     text-shadow: 0 0 6px rgba(200,168,75,0.15);
 }
 
 /* ── Tables ── */
 .md-typeset table:not([class]) {
-    border: 1px solid var(--wow-border);
+    border: 1px solid var(--clr-border-glow);
     border-radius: 3px;
     overflow: hidden;
-    box-shadow: var(--wow-shadow);
-    background: var(--wow-surface);
+    box-shadow: var(--clr-shadow);
+    background: var(--clr-surface);
 }
 
 .md-typeset table:not([class]) th {
-    background: var(--wow-panel);
-    color: var(--wow-gold);
+    background: var(--clr-panel);
+    color: var(--clr-gold);
     font-family: 'Cinzel', serif;
     font-size: 0.82rem;
     letter-spacing: 0.08em;
     text-transform: uppercase;
-    border-bottom: 1px solid var(--wow-border-glow);
+    border-bottom: 1px solid var(--clr-border-glow);
     padding: 0.65rem 1rem;
 }
 
 .md-typeset table:not([class]) td {
-    border-color: var(--wow-border);
+    border-color: var(--clr-border-glow);
     padding: 0.55rem 1rem;
-    color: var(--wow-text);
+    color: var(--clr-text);
 }
 
 .md-typeset table:not([class]) tr:nth-child(even) {
@@ -266,9 +260,9 @@ body {
 
 /* ── Code blocks ── */
 .md-typeset code {
-    background: var(--wow-code-bg);
+    background: var(--clr-code-bg);
     color: #c8a06a;
-    border: 1px solid var(--wow-border);
+    border: 1px solid var(--clr-border-glow);
     border-radius: 2px;
     font-family: 'Fira Code', monospace;
     font-size: 0.88em;
@@ -276,24 +270,24 @@ body {
 }
 
 .md-typeset pre > code {
-    background: var(--wow-code-bg);
-    border: 1px solid var(--wow-border);
+    background: var(--clr-code-bg);
+    border: 1px solid var(--clr-border-glow);
     box-shadow: inset 0 2px 12px rgba(0,0,0,0.5);
 }
 
 .highlight {
-    background: var(--wow-code-bg) !important;
-    border: 1px solid var(--wow-border);
+    background: var(--clr-code-bg) !important;
+    border: 1px solid var(--clr-border-glow);
     border-radius: 3px;
 }
 
 /* ── Admonitions ── */
 .md-typeset .admonition,
 .md-typeset details {
-    background: var(--wow-surface);
-    border-color: var(--wow-border);
+    background: var(--clr-surface);
+    border-color: var(--clr-border-glow);
     border-radius: 3px;
-    box-shadow: var(--wow-shadow);
+    box-shadow: var(--clr-shadow);
 }
 
 .md-typeset .admonition-title,
@@ -301,48 +295,48 @@ body {
     font-family: 'Cinzel', serif;
     font-size: 0.85rem;
     letter-spacing: 0.06em;
-    background: var(--wow-panel);
+    background: var(--clr-panel);
 }
 
-.md-typeset .note > .admonition-title { color: var(--wow-gold); border-color: var(--wow-gold-dim); }
-.md-typeset .warning > .admonition-title { color: var(--wow-amber); border-color: var(--wow-amber); }
-.md-typeset .danger > .admonition-title { color: #c0392b; border-color: #c0392b; }
-.md-typeset .tip > .admonition-title { color: #6aaa64; border-color: #4a8a44; }
+.md-typeset .note > .admonition-title    { color: var(--clr-gold);   border-color: var(--clr-gold-dim); }
+.md-typeset .warning > .admonition-title { color: var(--clr-amber);  border-color: var(--clr-amber); }
+.md-typeset .danger > .admonition-title  { color: #c0392b;           border-color: #c0392b; }
+.md-typeset .tip > .admonition-title     { color: #6aaa64;           border-color: #4a8a44; }
 
 /* ── Footer ── */
 .md-footer {
-    background: var(--wow-dark);
-    border-top: 1px solid var(--wow-border);
+    background: var(--clr-dark);
+    border-top: 1px solid var(--clr-border-glow);
 }
 
 .md-footer-meta {
-    background: var(--wow-black);
+    background: var(--clr-black);
 }
 
 .md-footer__title {
     font-family: 'Cinzel', serif;
-    color: var(--wow-gold-dim);
+    color: var(--clr-gold-dim);
 }
 
 .md-footer__link:hover .md-footer__title {
-    color: var(--wow-gold);
+    color: var(--clr-gold);
 }
 
 /* ── Back-to-top button ── */
 .md-top {
-    background: var(--wow-panel);
-    border: 1px solid var(--wow-border);
-    color: var(--wow-gold);
+    background: var(--clr-panel);
+    border: 1px solid var(--clr-border-glow);
+    color: var(--clr-gold);
     font-family: 'Cinzel', serif;
     font-size: 0.75rem;
     letter-spacing: 0.08em;
-    box-shadow: var(--wow-shadow);
+    box-shadow: var(--clr-shadow);
 }
 
 .md-top:hover {
-    background: var(--wow-surface);
-    color: var(--wow-gold-bright);
-    box-shadow: var(--wow-glow), var(--wow-shadow);
+    background: var(--clr-surface);
+    color: var(--clr-gold-bright);
+    box-shadow: var(--clr-glow), var(--clr-shadow);
 }
 
 /* ── Tabs (pymdownx.tabbed) ── */
@@ -350,18 +344,18 @@ body {
     font-family: 'Cinzel', serif;
     font-size: 0.8rem;
     letter-spacing: 0.06em;
-    color: var(--wow-text-muted);
+    color: var(--clr-text-muted);
     border-bottom: 2px solid transparent;
 }
 
 .md-typeset .tabbed-labels > label:hover {
-    color: var(--wow-gold);
+    color: var(--clr-gold);
 }
 
 .md-typeset [data-md-component="tabbed-labels"] > .tabbed-input:checked ~ label,
 .md-typeset .tabbed-labels > .tabbed-input:checked + label {
-    color: var(--wow-gold);
-    border-bottom-color: var(--wow-gold);
+    color: var(--clr-gold);
+    border-bottom-color: var(--clr-gold);
 }
 
 /* ── Scrollbar ── */
@@ -371,22 +365,22 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-    background: var(--wow-dark);
+    background: var(--clr-dark);
 }
 
 ::-webkit-scrollbar-thumb {
-    background: var(--wow-border);
+    background: var(--clr-border-glow);
     border-radius: 2px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: var(--wow-border-glow);
+    background: var(--clr-gold-dim);
 }
 
 /* ── Selection ── */
 ::selection {
     background: rgba(200,168,75,0.25);
-    color: var(--wow-gold-bright);
+    color: var(--clr-gold-bright);
 }
 
 /* ── Horizontal rule — ornamental divider ── */
@@ -395,7 +389,7 @@ body {
     text-align: center;
     overflow: visible;
     height: 1px;
-    background: linear-gradient(90deg, transparent 0%, var(--wow-border-glow) 30%, var(--wow-gold-dim) 50%, var(--wow-border-glow) 70%, transparent 100%);
+    background: linear-gradient(90deg, transparent 0%, var(--clr-border-glow) 30%, var(--clr-gold-dim) 50%, var(--clr-border-glow) 70%, transparent 100%);
     margin: 2rem 0;
     position: relative;
 }
@@ -407,8 +401,8 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background: var(--wow-dark);
-    color: var(--wow-gold-dim);
+    background: var(--clr-dark);
+    color: var(--clr-gold-dim);
     padding: 0 0.5rem;
     font-size: 0.8rem;
     text-shadow: 0 0 4px rgba(200,168,75,0.25);
@@ -417,7 +411,7 @@ body {
 /* ── TOC ── */
 .md-nav--secondary .md-nav__title {
     font-family: 'Cinzel', serif;
-    color: var(--wow-gold-dim) !important;
+    color: var(--clr-gold-dim) !important;
     font-size: 0.7rem;
     letter-spacing: 0.12em;
 }
@@ -428,18 +422,18 @@ body {
 
 /* ── Keyboard keys ── */
 .md-typeset kbd {
-    background: var(--wow-panel);
-    border: 1px solid var(--wow-border-glow);
-    color: var(--wow-text);
-    box-shadow: 0 2px 0 var(--wow-border);
+    background: var(--clr-panel);
+    border: 1px solid var(--clr-border-glow);
+    color: var(--clr-text);
+    box-shadow: 0 2px 0 var(--clr-border-glow);
     font-family: 'Fira Code', monospace;
 }
 
 /* ── Blockquotes ── */
 .md-typeset blockquote {
-    border-left: 3px solid var(--wow-gold-dim);
-    background: var(--wow-surface);
-    color: var(--wow-text-muted);
+    border-left: 3px solid var(--clr-gold-dim);
+    background: var(--clr-surface);
+    color: var(--clr-text-muted);
     padding: 0.8rem 1.2rem;
     font-style: italic;
     font-family: 'EB Garamond', serif;
@@ -449,7 +443,7 @@ body {
 .md-typeset dt {
     font-family: 'Cinzel', serif;
     font-size: 0.9rem;
-    color: var(--wow-gold);
+    color: var(--clr-gold);
     letter-spacing: 0.04em;
     margin-top: 1rem;
 }
