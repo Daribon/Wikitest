@@ -159,6 +159,20 @@ body {
     padding: 2rem 2.5rem;
 }
 
+/* ── Edit page button ── */
+.md-content__button {
+    color: var(--wow-gold-dim);
+    opacity: 0.6;
+    transition: opacity 0.2s, color 0.2s;
+    position: relative;
+    z-index: 1;
+}
+
+.md-content__button:hover {
+    opacity: 1;
+    color: var(--wow-gold);
+}
+
 /* ── Page headings ── */
 .md-typeset h1 {
     font-family: 'Cinzel Decorative', 'Cinzel', serif;
