@@ -108,23 +108,11 @@ body {
 .md-sidebar {
     background: var(--wow-dark);
     border-right: 1px solid var(--wow-border);
-    overflow: hidden;
 }
 
 .md-sidebar--secondary {
     border-right: none;
     border-left: 1px solid var(--wow-border);
-}
-
-.md-sidebar__scrollwrap {
-    overscroll-behavior: contain;
-    /* Give equal top & bottom margin so MkDocs JS subtracts them correctly
-     *    via its (height - 2 * offsetY) calculation, preventing upward bleed */
-    margin: 0.5rem 0 !important;
-}
-
-.md-sidebar__inner {
-    padding-top: 0.5rem;
 }
 
 /* Nav section titles */
