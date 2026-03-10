@@ -169,25 +169,11 @@ body {
     letter-spacing: 0.04em;
     border-bottom: none;
     position: relative;
-    padding-bottom: 1.1rem;
+    padding-bottom: 0.6rem;
     margin-bottom: 1.5rem;
 }
 
-/* Ornamental divider under h1 */
-.md-typeset h1::after {
-    content: '⚔';
-    display: block;
-    text-align: center;
-    font-size: 1.1rem;
-    color: var(--wow-gold-dim);
-    margin-top: 0.5rem;
-    letter-spacing: 0.5rem;
-    text-shadow: 0 0 10px rgba(200,168,75,0.4);
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    bottom: -0.1rem;
-}
+
 
 .md-typeset h2 {
     font-family: 'Cinzel', serif;
