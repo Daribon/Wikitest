@@ -1,6 +1,6 @@
 ### How do i run my own server with the code?
 
-Please read the [Compilation](https://github.com/vmangos/wiki/wiki/Compiling-on-Windows) and [Configuration](https://github.com/vmangos/wiki/wiki/Getting-it-working) guides first.
+Please read the [Compilation](Compiling-on-Windows.md) and [Configuration](Getting-it-working.md) guides first.
 
 ### I get an error immediately upon starting my server.
 

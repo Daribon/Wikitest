@@ -14,7 +14,7 @@ The creature template id to which this event belongs.
 
 ### 3. condition_id - mediumint(8) unsigned
 
-A condition id from the [conditions](https://github.com/vmangos/wiki/wiki/conditions) table. This is an optional field.
+A condition id from the [conditions](conditions.md) table. This is an optional field.
 
 ### 4. event_type - tinyint(5) unsigned
 

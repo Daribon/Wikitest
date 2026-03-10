@@ -46,7 +46,7 @@ These are floating point fields whose meaning depends on the command type. Pleas
 
 ### 11. condition_id - mediumint(8) unsigned
 
-A condition id from the [conditions](https://github.com/vmangos/wiki/wiki/conditions) table. This is an optional field.
+A condition id from the [conditions](conditions.md) table. This is an optional field.
 
 ### 12. comments - varchar(255)
 
