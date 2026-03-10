@@ -1,10 +1,29 @@
-site_name: Wikitest
+site_name: VMangos Wiki
+site_description: Official documentation for the VMangos Vanilla WoW server emulator
 site_url: https://daribon.github.io/Wikitest/
+repo_url: https://github.com/Daribon/Wikitest
+edit_uri: edit/master/docs/
 use_directory_urls: true
 
 theme:
   name: material
   language: en
+  font:
+    text: Roboto
+    code: Roboto Mono
+  palette:
+    - scheme: default
+      primary: deep purple
+      accent: deep purple
+      toggle:
+        icon: material/weather-night
+        name: Switch to dark mode
+    - scheme: slate
+      primary: deep purple
+      accent: deep purple
+      toggle:
+        icon: material/weather-sunny
+        name: Switch to light mode
   features:
     - navigation.instant
     - navigation.sections
@@ -12,6 +31,7 @@ theme:
     - navigation.top
     - toc.integrate
     - content.code.copy
+    - content.action.edit
     - search.suggest
     - search.highlight
 
@@ -24,6 +44,8 @@ markdown_extensions:
   - def_list
   - attr_list
   - md_in_html
+  - codehilite:
+      guess_lang: false
   - pymdownx.superfences
   - pymdownx.details
   - pymdownx.highlight
@@ -72,4 +94,3 @@ nav:
       - Broadcast Text: broadcast_text.md
       - Cinematic Waypoints: cinematic_waypoints.md
       - Command: command.md
-
