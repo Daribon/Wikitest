@@ -9,21 +9,12 @@ theme:
   name: material
   language: en
   font:
-    text: Roboto
-    code: Roboto Mono
+    text: EB Garamond          # Classic Garamond style for body text
+    code: Fira Code            # Modern, readable monospaced font for code blocks
   palette:
-    - scheme: default
-      primary: deep purple
-      accent: deep purple
-      toggle:
-        icon: material/weather-night
-        name: Switch to dark mode
-    - scheme: slate
-      primary: deep purple
-      accent: deep purple
-      toggle:
-        icon: material/weather-sunny
-        name: Switch to light mode
+    scheme: slate              # Dark mode only – no light mode, no toggle
+    primary: deep purple
+    accent: deep purple
   features:
     - navigation.instant
     - navigation.sections
@@ -60,18 +51,15 @@ markdown_extensions:
 
 nav:
   - Home: Home.md
-
   - Getting Started:
       - About the Project: About-the-project.md
       - Getting it Working: Getting-it-working.md
       - Frequently Asked Questions: Frequently-Asked-Questions.md
       - Contribution Guide: Contribution-guide.md
-
   - Compiling:
       - Compiling on Windows: Compiling-on-Windows.md
       - Compiling on Linux: Compiling-on-Linux.md
       - Devuan Install Guide: Devuan-install-guide.md
-
   - Database:
       - World Database: World-Database.md
       - DB Script Tables: DB-Script-Tables.md
