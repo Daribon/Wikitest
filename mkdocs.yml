@@ -3,6 +3,7 @@ site_description: Official documentation for the VMangos Vanilla WoW server emul
 site_url: https://vmangos.github.io/wiki
 repo_url: https://github.com/vmangos/wiki
 edit_uri: edit/master/docs/
+use_directory_urls: true
 
 theme:
   name: material
