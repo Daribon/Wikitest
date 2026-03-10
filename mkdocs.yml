@@ -4,17 +4,16 @@ site_url: https://daribon.github.io/Wikitest/
 repo_url: https://github.com/Daribon/Wikitest
 edit_uri: edit/main/docs/
 use_directory_urls: true
-
 theme:
   name: material
   language: en
   font:
-    text: Manrope          # Classic Garamond style for body text
-    code: Fira Code            # Modern, readable monospaced font for code blocks
+    text: Cinzel             # Serif fantasy/roman typeface — evokes ancient stone engravings
+    code: Fira Code          # Modern, readable monospaced font for code blocks
   palette:
-    scheme: slate              # Dark mode only – no light mode, no toggle
-    primary: deep purple
-    accent: deep purple
+    scheme: slate            # Dark mode base
+    primary: black
+    accent: amber
   features:
     - navigation.instant
     - navigation.sections
@@ -25,10 +24,8 @@ theme:
     - content.action.edit
     - search.suggest
     - search.highlight
-
 extra_css:
   - stylesheets/extra.css
-
 markdown_extensions:
   - admonition
   - toc:
@@ -51,7 +48,6 @@ markdown_extensions:
       emoji_generator: !!python/name:pymdownx.emoji.to_svg
   - pymdownx.tabbed:
       alternate_style: true
-
 nav:
   - Home: Home.md
   - Getting Started:

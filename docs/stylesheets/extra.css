@@ -1,19 +1,455 @@
-.md-typeset {
-    --md-text-font-size: 1.0rem;   /* or 1.0625rem if you want slightly larger */
-    line-height: 1.7;
-    font-feature-settings: "liga" 1, "calt" 1;  /* Enable nice ligatures if supported */
-}
+/* ============================================================
+ *  VMangos Wiki — Dark WoW / Medieval Fantasy Theme
+ *  Inspired by vanilla-archive.thealphaproject.eu
+ *  ============================================================ */
 
-pre, code {
-    font-feature-settings: normal;  /* Avoid odd ligatures in code blocks */
-}
+/* ── Google Fonts ── */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cinzel+Decorative:wght@400;700&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Fira+Code:wght@400;500&display=swap');
 
+/* ── Root palette ── */
 :root {
-    --md-primary-fg-color:        #4A148C;   /* deep mystical purple */
-    --md-accent-fg-color:         #AB47BC;   /* accent for links/hovers */
-    --md-default-bg-color--dark:  #0a0014;   /* very dark bg for immersion */
+    --wow-black:        #0b0a09;
+    --wow-dark:         #110f0d;
+    --wow-surface:      #1a1612;
+    --wow-panel:        #211d17;
+    --wow-border:       #4a3c28;
+    --wow-border-glow:  #7a5c2e;
+    --wow-gold:         #c8a84b;
+    --wow-gold-bright:  #f0c060;
+    --wow-gold-dim:     #8a6d30;
+    --wow-amber:        #d4881e;
+    --wow-text:         #d4c4a0;
+    --wow-text-muted:   #8a7a5a;
+    --wow-link:         #c8a84b;
+    --wow-link-hover:   #f0c060;
+    --wow-red:          #8b2020;
+    --wow-code-bg:      #160f08;
+    --wow-shadow:       0 4px 24px rgba(0,0,0,0.8);
+    --wow-glow:         0 0 12px rgba(200,168,75,0.3);
 }
 
+/* ── Base overrides ── */
+[data-md-color-scheme="slate"] {
+    --md-default-bg-color:        var(--wow-dark);
+    --md-default-fg-color:        var(--wow-text);
+    --md-default-fg-color--light: var(--wow-text-muted);
+    --md-primary-fg-color:        var(--wow-black);
+    --md-primary-bg-color:        var(--wow-gold);
+    --md-accent-fg-color:         var(--wow-gold-bright);
+    --md-typeset-a-color:         var(--wow-link);
+    --md-code-bg-color:           var(--wow-code-bg);
+    --md-code-fg-color:           #d4b896;
+}
+
+/* ── Body & base typography ── */
+body {
+    background-color: var(--wow-black);
+    background-image:
+    radial-gradient(ellipse at 20% 0%, rgba(80,50,10,0.15) 0%, transparent 60%),
+    radial-gradient(ellipse at 80% 100%, rgba(60,30,5,0.12) 0%, transparent 60%),
+    url("data:image/svg+xml,%3Csvg width='200' height='200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+    font-family: 'EB Garamond', Georgia, serif;
+}
+
+.md-typeset {
+    font-family: 'EB Garamond', Georgia, serif;
+    font-size: 1.05rem;
+    line-height: 1.75;
+    color: var(--wow-text);
+}
+
+/* ── Header / top bar ── */
 .md-header {
-    background: #1a0033;                    /* subtle dark purple header */
+    background: linear-gradient(180deg, #0d0b09 0%, #1a1510 100%);
+    border-bottom: 1px solid var(--wow-border);
+    box-shadow: 0 2px 16px rgba(0,0,0,0.9), 0 1px 0 var(--wow-border-glow);
+}
+
+.md-header__title {
+    font-family: 'Cinzel Decorative', 'Cinzel', serif;
+    font-weight: 700;
+    font-size: 1.1rem;
+    letter-spacing: 0.08em;
+    color: var(--wow-gold) !important;
+    text-shadow: 0 0 20px rgba(200,168,75,0.5), 0 2px 4px rgba(0,0,0,0.8);
+}
+
+.md-header__button.md-logo img,
+.md-header__button.md-logo svg {
+    filter: drop-shadow(0 0 6px rgba(200,168,75,0.6));
+}
+
+/* ── Search bar ── */
+.md-search__form {
+    background: var(--wow-surface);
+    border: 1px solid var(--wow-border);
+    border-radius: 3px;
+}
+
+.md-search__form:focus-within {
+    border-color: var(--wow-gold-dim);
+    box-shadow: 0 0 8px rgba(200,168,75,0.2);
+}
+
+.md-search__input {
+    font-family: 'EB Garamond', serif;
+    color: var(--wow-text);
+}
+
+.md-search__input::placeholder {
+    color: var(--wow-text-muted);
+}
+
+/* ── Navigation sidebar ── */
+.md-nav {
+    font-family: 'EB Garamond', Georgia, serif;
+}
+
+.md-sidebar {
+    background: var(--wow-dark);
+    border-right: 1px solid var(--wow-border);
+}
+
+.md-sidebar--secondary {
+    border-right: none;
+    border-left: 1px solid var(--wow-border);
+}
+
+/* Nav section titles */
+.md-nav__title {
+    font-family: 'Cinzel', serif;
+    font-weight: 600;
+    font-size: 0.72rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--wow-gold) !important;
+    border-bottom: 1px solid var(--wow-border);
+    padding-bottom: 0.4rem;
+    margin-bottom: 0.4rem;
+}
+
+/* Nav links */
+.md-nav__link {
+    color: var(--wow-text-muted) !important;
+    transition: color 0.2s, padding-left 0.2s;
+    font-size: 0.95rem;
+}
+
+.md-nav__link:hover,
+.md-nav__link:focus {
+    color: var(--wow-gold) !important;
+    padding-left: 0.25rem;
+}
+
+.md-nav__link--active {
+    color: var(--wow-gold-bright) !important;
+    font-weight: 600;
+}
+
+/* ── Main content area ── */
+.md-main {
+    background: var(--wow-black);
+}
+
+.md-content {
+    background: transparent;
+}
+
+.md-content__inner {
+    padding: 2rem 2.5rem;
+}
+
+/* ── Page headings ── */
+.md-typeset h1 {
+    font-family: 'Cinzel Decorative', 'Cinzel', serif;
+    font-weight: 700;
+    font-size: 2rem;
+    color: var(--wow-gold-bright);
+    text-shadow: 0 0 24px rgba(200,168,75,0.35), 0 2px 6px rgba(0,0,0,0.9);
+    letter-spacing: 0.04em;
+    border-bottom: none;
+    position: relative;
+    padding-bottom: 1.1rem;
+    margin-bottom: 1.5rem;
+}
+
+/* Ornamental divider under h1 */
+.md-typeset h1::after {
+    content: '⚔';
+    display: block;
+    text-align: center;
+    font-size: 1.1rem;
+    color: var(--wow-gold-dim);
+    margin-top: 0.5rem;
+    letter-spacing: 0.5rem;
+    text-shadow: 0 0 10px rgba(200,168,75,0.4);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -0.1rem;
+}
+
+.md-typeset h2 {
+    font-family: 'Cinzel', serif;
+    font-weight: 600;
+    font-size: 1.4rem;
+    color: var(--wow-gold);
+    letter-spacing: 0.03em;
+    border-bottom: 1px solid var(--wow-border);
+    padding-bottom: 0.4rem;
+    margin-top: 2.5rem;
+}
+
+.md-typeset h3 {
+    font-family: 'Cinzel', serif;
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: var(--wow-amber);
+    letter-spacing: 0.02em;
+    margin-top: 2rem;
+}
+
+.md-typeset h4,
+.md-typeset h5,
+.md-typeset h6 {
+    font-family: 'Cinzel', serif;
+    color: var(--wow-text);
+}
+
+/* ── Links ── */
+.md-typeset a {
+    color: var(--wow-link);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: color 0.2s, border-color 0.2s;
+}
+
+.md-typeset a:hover {
+    color: var(--wow-link-hover);
+    border-bottom-color: var(--wow-gold-dim);
+    text-shadow: 0 0 8px rgba(200,168,75,0.3);
+}
+
+/* ── Tables ── */
+.md-typeset table:not([class]) {
+    border: 1px solid var(--wow-border);
+    border-radius: 3px;
+    overflow: hidden;
+    box-shadow: var(--wow-shadow);
+    background: var(--wow-surface);
+}
+
+.md-typeset table:not([class]) th {
+    background: var(--wow-panel);
+    color: var(--wow-gold);
+    font-family: 'Cinzel', serif;
+    font-size: 0.82rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    border-bottom: 1px solid var(--wow-border-glow);
+    padding: 0.65rem 1rem;
+}
+
+.md-typeset table:not([class]) td {
+    border-color: var(--wow-border);
+    padding: 0.55rem 1rem;
+    color: var(--wow-text);
+}
+
+.md-typeset table:not([class]) tr:nth-child(even) {
+    background: rgba(255,255,255,0.02);
+}
+
+.md-typeset table:not([class]) tr:hover td {
+    background: rgba(200,168,75,0.05);
+}
+
+/* ── Code blocks ── */
+.md-typeset code {
+    background: var(--wow-code-bg);
+    color: #c8a06a;
+    border: 1px solid var(--wow-border);
+    border-radius: 2px;
+    font-family: 'Fira Code', monospace;
+    font-size: 0.88em;
+    padding: 0.05em 0.35em;
+}
+
+.md-typeset pre > code {
+    background: var(--wow-code-bg);
+    border: 1px solid var(--wow-border);
+    box-shadow: inset 0 2px 12px rgba(0,0,0,0.5);
+}
+
+.highlight {
+    background: var(--wow-code-bg) !important;
+    border: 1px solid var(--wow-border);
+    border-radius: 3px;
+}
+
+/* ── Admonitions ── */
+.md-typeset .admonition,
+.md-typeset details {
+    background: var(--wow-surface);
+    border-color: var(--wow-border);
+    border-radius: 3px;
+    box-shadow: var(--wow-shadow);
+}
+
+.md-typeset .admonition-title,
+.md-typeset summary {
+    font-family: 'Cinzel', serif;
+    font-size: 0.85rem;
+    letter-spacing: 0.06em;
+    background: var(--wow-panel);
+}
+
+.md-typeset .note > .admonition-title { color: var(--wow-gold); border-color: var(--wow-gold-dim); }
+.md-typeset .warning > .admonition-title { color: var(--wow-amber); border-color: var(--wow-amber); }
+.md-typeset .danger > .admonition-title { color: #c0392b; border-color: #c0392b; }
+.md-typeset .tip > .admonition-title { color: #6aaa64; border-color: #4a8a44; }
+
+/* ── Footer ── */
+.md-footer {
+    background: var(--wow-dark);
+    border-top: 1px solid var(--wow-border);
+}
+
+.md-footer-meta {
+    background: var(--wow-black);
+}
+
+.md-footer__title {
+    font-family: 'Cinzel', serif;
+    color: var(--wow-gold-dim);
+}
+
+.md-footer__link:hover .md-footer__title {
+    color: var(--wow-gold);
+}
+
+/* ── Back-to-top button ── */
+.md-top {
+    background: var(--wow-panel);
+    border: 1px solid var(--wow-border);
+    color: var(--wow-gold);
+    font-family: 'Cinzel', serif;
+    font-size: 0.75rem;
+    letter-spacing: 0.08em;
+    box-shadow: var(--wow-shadow);
+}
+
+.md-top:hover {
+    background: var(--wow-surface);
+    color: var(--wow-gold-bright);
+    box-shadow: var(--wow-glow), var(--wow-shadow);
+}
+
+/* ── Tabs (pymdownx.tabbed) ── */
+.md-typeset .tabbed-labels > label {
+    font-family: 'Cinzel', serif;
+    font-size: 0.8rem;
+    letter-spacing: 0.06em;
+    color: var(--wow-text-muted);
+    border-bottom: 2px solid transparent;
+}
+
+.md-typeset .tabbed-labels > label:hover {
+    color: var(--wow-gold);
+}
+
+.md-typeset [data-md-component="tabbed-labels"] > .tabbed-input:checked ~ label,
+.md-typeset .tabbed-labels > .tabbed-input:checked + label {
+    color: var(--wow-gold);
+    border-bottom-color: var(--wow-gold);
+}
+
+/* ── Scrollbar ── */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--wow-dark);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--wow-border);
+    border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--wow-border-glow);
+}
+
+/* ── Selection ── */
+::selection {
+    background: rgba(200,168,75,0.25);
+    color: var(--wow-gold-bright);
+}
+
+/* ── Horizontal rule — ornamental divider ── */
+.md-typeset hr {
+    border: none;
+    text-align: center;
+    overflow: visible;
+    height: 1px;
+    background: linear-gradient(90deg, transparent 0%, var(--wow-border-glow) 30%, var(--wow-gold-dim) 50%, var(--wow-border-glow) 70%, transparent 100%);
+    margin: 2rem 0;
+    position: relative;
+}
+
+.md-typeset hr::after {
+    content: '✦';
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: var(--wow-dark);
+    color: var(--wow-gold-dim);
+    padding: 0 0.5rem;
+    font-size: 0.8rem;
+    text-shadow: 0 0 8px rgba(200,168,75,0.5);
+}
+
+/* ── TOC ── */
+.md-nav--secondary .md-nav__title {
+    font-family: 'Cinzel', serif;
+    color: var(--wow-gold-dim) !important;
+    font-size: 0.7rem;
+    letter-spacing: 0.12em;
+}
+
+.md-nav--secondary .md-nav__link {
+    font-size: 0.88rem;
+}
+
+/* ── Keyboard keys ── */
+.md-typeset kbd {
+    background: var(--wow-panel);
+    border: 1px solid var(--wow-border-glow);
+    color: var(--wow-text);
+    box-shadow: 0 2px 0 var(--wow-border);
+    font-family: 'Fira Code', monospace;
+}
+
+/* ── Blockquotes ── */
+.md-typeset blockquote {
+    border-left: 3px solid var(--wow-gold-dim);
+    background: var(--wow-surface);
+    color: var(--wow-text-muted);
+    padding: 0.8rem 1.2rem;
+    font-style: italic;
+    font-family: 'EB Garamond', serif;
+}
+
+/* ── Definition lists ── */
+.md-typeset dt {
+    font-family: 'Cinzel', serif;
+    font-size: 0.9rem;
+    color: var(--wow-gold);
+    letter-spacing: 0.04em;
+    margin-top: 1rem;
 }
