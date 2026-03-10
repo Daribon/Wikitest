@@ -117,22 +117,14 @@ body {
 }
 
 .md-sidebar__scrollwrap {
-    /* Clamp the scroll area so it can never reach above the top of the sidebar */
-    overflow-y: auto;
     overscroll-behavior: contain;
-    /* The scrollwrap must not exceed the sidebar's own height */
-    height: 100% !important;
-    max-height: 100% !important;
-    margin-top: 0 !important;
-    padding-top: 0 !important;
-    top: 0 !important;
+    /* Give equal top & bottom margin so MkDocs JS subtracts them correctly
+     *    via its (height - 2 * offsetY) calculation, preventing upward bleed */
+    margin: 0.5rem 0 !important;
 }
 
-/* Ensure the inner nav content starts at the top with no negative offset */
 .md-sidebar__inner {
     padding-top: 0.5rem;
-    position: relative;
-    top: 0 !important;
 }
 
 /* Nav section titles */
