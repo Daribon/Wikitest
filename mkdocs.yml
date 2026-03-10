@@ -9,7 +9,7 @@ theme:
   name: material
   language: en
   font:
-    text: Georgia          # Classic Garamond style for body text
+    text: Manrope          # Classic Garamond style for body text
     code: Fira Code            # Modern, readable monospaced font for code blocks
   palette:
     scheme: slate              # Dark mode only – no light mode, no toggle

@@ -1,12 +1,11 @@
-/* Improve serif readability in dark mode */
 .md-typeset {
-    --md-text-font-size: 1.0625rem;     /* Slightly larger base size helps thin serifs */
-    line-height: 1.65;                  /* More breathing room */
-    font-feature-settings: "liga" 1, "calt" 1;  /* Nice OpenType ligatures */
+    --md-text-font-size: 1.0rem;   /* or 1.0625rem if you want slightly larger */
+    line-height: 1.7;
+    font-feature-settings: "liga" 1, "calt" 1;  /* Enable nice ligatures if supported */
 }
 
-code, pre code {
-    font-feature-settings: normal;      /* Avoid weird ligatures in code */
+pre, code {
+    font-feature-settings: normal;  /* Avoid odd ligatures in code blocks */
 }
 
 :root {
