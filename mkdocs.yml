@@ -1,8 +1,8 @@
 site_name: VMangos Wiki
 site_description: Official documentation for the VMangos Vanilla WoW server emulator
 site_url: https://daribon.github.io/Wikitest/
-repo_url: https://github.com/Daribon/Wikitest
-edit_uri: edit/main/docs/
+repo_url: https://github.com/vmangos/core
+edit_uri: https://github.com/Daribon/Wikitest/edit/main/docs/
 use_directory_urls: true
 theme:
   name: material
