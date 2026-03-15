@@ -47,7 +47,7 @@ markdown_extensions:
   - pymdownx.tabbed:
       alternate_style: true
 nav:
-  - Home: index.md
+  - Home: README.md
   - Getting Started:
       - About the Project: About-the-project.md
       - Getting it Working: Getting-it-working.md
