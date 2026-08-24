@@ -1,6 +1,9 @@
+# Compiling on Windows
+
 This page will guide you through all the required steps to compile the server core on Windows. We also have a [video tutorial](https://www.youtube.com/watch?v=dDQs1t5fZWo) on the subject for people who are not into reading.
 
 ### Required software:
+
 - [Microsoft Visual Studio](https://www.visualstudio.com/vs/visual-studio-express/) ([click here for 2015](https://go.microsoft.com/fwlink/?LinkId=615448&clcid=0x409))
 - [CMake](https://cmake.org/download/)
 - [Git](https://git-scm.com/download/win)
@@ -27,6 +30,10 @@ You should now find the solution file inside the "build" folder.
 
 Go to "build" and open the "MaNGOS.sln" project in Visual Studio. The first thing you need to do after loading the solution file is to change the configuration to Release. Then simply right click on ALL_BUILD, press Build and wait.
 
+Go to the next tutorial to learn how to setup your database and extract data files.
+
 ![](https://i.imgur.com/FJg0maH.gif)
 
 When it finishes building, right click on INSTALL and press build again. You will now find the compiled server binaries inside the install directory you specified when configuring with CMake.
+
+Go to the [next tutorial](Getting-it-working-Windows.md) to learn how to setup your database and extract data files.
