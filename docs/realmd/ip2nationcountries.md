@@ -1,6 +1,6 @@
 # ip2nationcountries Table
 
-Country metadata for [`ip2nation`](ip2nation.md).
+Country metadata for [`ip2nation`](ip2nation.md). Not read or written by server; provided for external tooling.
 
 ---
 

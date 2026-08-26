@@ -1,6 +1,7 @@
 # ip2nation Table
 
-Mapping of IP ranges to country codes for GeoIP lookups.
+Mapping of IP ranges to country codes. Not read or written by server (all geolocking uses [`geoip`](geoip.md));
+provided for external tooling.
 
 ---
 

@@ -42,4 +42,5 @@ Registered realms served by this auth server (name, address, type, security leve
 - <a id="f-gamebuild_min"></a>**`gamebuild_min`** - Accepted client build range. Not read by this core; kept for compatibility.
 - <a id="f-gamebuild_max"></a>**`gamebuild_max`** - Accepted client build range. Not read by this core; kept for compatibility.
 - <a id="f-flag"></a>**`flag`** - Additional display flag byte. Not read by this core; kept for compatibility.
-- <a id="f-realmbuilds"></a>**`realmbuilds`** - Explicit comma-separated accepted build list overriding min/max. Written by mangosd at startup.
+- <a id="f-realmbuilds"></a>**`realmbuilds`** - Space-separated list of accepted build numbers, rewritten by mangosd at startup
+  (e.g. `5875 6005`).
