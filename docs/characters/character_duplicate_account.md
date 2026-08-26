@@ -1,6 +1,6 @@
 # character_duplicate_account Table
 
-Not currently used by server.
+Not currently used by core.
 
 ---
 

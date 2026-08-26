@@ -1,7 +1,6 @@
 # ip2nation Table
 
-Mapping of IP ranges to country codes. Not read or written by server (all geolocking uses [`geoip`](geoip.md));
-provided for external tooling.
+Mapping of IP ranges to country codes. Not read or written by core (all geolocking uses [`geoip`](geoip.md)).
 
 ---
 
@@ -11,10 +10,3 @@ provided for external tooling.
 | :---- | :---- | :--- | :--- | :------ | :---- |
 | [`ip`](#f-ip) | int(11) unsigned | MUL | NO | 0 |  |
 | [`country`](#f-country) | char(2) |  | NO | '' |  |
-
----
-
-## Field Breakdown
-
-- <a id="f-ip"></a>**`ip`** - Leading IP block key.
-- <a id="f-country"></a>**`country`** - Two-letter country code.

@@ -1,6 +1,6 @@
 # geoip Table
 
-IP range to country mapping cache used by the login server.
+IP range to country mapping cache used by the login server. Only used when geolocking is enabled.
 
 ---
 

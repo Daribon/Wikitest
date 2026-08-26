@@ -1,6 +1,6 @@
 # worldstates Table
 
-Not currently used by server - no code reads or writes to the table.
+Not currently used by core - no code reads or writes to the table.
 
 ---
 

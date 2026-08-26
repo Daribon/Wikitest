@@ -49,10 +49,10 @@ Account credentials and per-account settings (username, password hash/verifier, 
 - <a id="f-joindate"></a>**`joindate`** - Registration date.
 - <a id="f-last_ip"></a>**`last_ip`** - IP of the most recent login.
 - <a id="f-locked"></a>**`locked`** - Lock/authenticator bitmask (`LockFlag`): 1 = IP lock to `last_ip`, 2 = fixed PIN required, 4 = TOTP authenticator, 8 = always enforce authenticator, 16 = GeoIP country lock, 32 = GeoIP city lock.
-- <a id="f-lock_country"></a>**`lock_country`** - Country code of the client's last-login IP (populated by external tooling); never written or read by this core.
+- <a id="f-lock_country"></a>**`lock_country`** - Country code of the client's last-login IP (populated by external tooling); never written or read by core.
 - <a id="f-last_login"></a>**`last_login`** - Timestamp of previous successful login.
-- <a id="f-online"></a>**`online`** - 1 while logged into any realm served by this auth server.
-- <a id="f-expansion"></a>**`expansion`** - Expansion level (`.account set addon`): 0 classic, 1 TBC, 2 WotLK. Set via command only; not consulted by this classic-only core.
+- <a id="f-online"></a>**`online`** - 1 while logged into any realm served by auth server.
+- <a id="f-expansion"></a>**`expansion`** - Expansion level (`.account set addon`): 0 classic, 1 TBC, 2 WotLK. Set via command only.
 - <a id="f-mutetime"></a>**`mutetime`** - Unix timestamp until chat mutes expire (0 none).
 - <a id="f-locale"></a>**`locale`** - Client locale id selected at login (drives localized DBC data).
 - <a id="f-os"></a>**`os`** - OS identifier reported by client (Win/Mac).

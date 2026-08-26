@@ -1,6 +1,6 @@
 # logs_trashcharacters Table
 
-Never read or written by server.
+Never read or written by core.
 
 ---
 

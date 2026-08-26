@@ -219,7 +219,7 @@ Duel arbiter flag object; single spawn in game data.
 
 #### 17 - FISHINGNODE
 
-Fishing bobber. data0 unused · data1 lootId (defined in the union but not read by the server;
+Fishing bobber. data0 unused · data1 lootId (defined in the union but not read by the core;
 bobber loot comes from [`fishing_loot_template`](fishing_loot_template.md) keyed by zone/area id).
 
 #### 18 - SUMMONING_RITUAL

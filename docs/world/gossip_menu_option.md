@@ -44,8 +44,8 @@ Defines options within a gossip menu - buttons, actions, and conditions.
 - <a id="f-action_poi_id"></a>**`action_poi_id`** - Point of interest to display.
 - <a id="f-action_script_id"></a>**`action_script_id`** - Script to execute.
 - <a id="f-box_coded"></a>**`box_coded`** - `1` if requires a key/coded box.
-- <a id="f-box_money"></a>**`box_money`** - Money required to choose this option (currently ignored by server -
-  the server reads but never applies it).
+- <a id="f-box_money"></a>**`box_money`** - Money required to choose this option (currently ignored by core -
+  the core reads but never applies it).
 - <a id="f-box_text"></a>**`box_text`** - Text shown in the confirmation box.
 - <a id="f-box_broadcast_text"></a>**`box_broadcast_text`** - Broadcast text ID for box text.; references [`broadcast_text`](broadcast_text.md).entry
 - <a id="f-condition_id"></a>**`condition_id`** - Condition required. (see [`conditions`](conditions.md).condition_entry)
